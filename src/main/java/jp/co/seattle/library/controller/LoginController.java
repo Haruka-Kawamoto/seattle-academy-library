@@ -51,16 +51,6 @@ public class LoginController {
 			model.addAttribute("errorMessage", "メールアドレスとパスワードが一致しません");
 			return "login";
 		}
-		
-//		if (Objects.isNull(selectedUserInfo)) {
-//			model.addAttribute("errorMessage", "メールアドレスとパスワードが一致しません");
-//			return "login";
-//		}
-//		
-//		if (Objects.nonNull(selectedUserInfo)) {
-//			return "redirect:/home";
-//
-//		}
 
 	}
 }
