@@ -51,6 +51,5 @@ public class LoginController {
 			model.addAttribute("errorMessage", "メールアドレスとパスワードが一致しません");
 			return "login";
 		}
-
 	}
 }
