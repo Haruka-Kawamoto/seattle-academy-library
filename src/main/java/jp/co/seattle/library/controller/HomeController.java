@@ -19,7 +19,7 @@ import jp.co.seattle.library.service.BooksService;
 @Controller // APIの入り口
 public class HomeController {
 	final static Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	@Autowired
 	private BooksService booksService;
 
@@ -32,9 +32,9 @@ public class HomeController {
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 
 	public String transitionHome(Model model) {
-	//書籍の{一覧情報を取得（タスク３）}
-	List<BookInfo> book = booksService.getBookList();
-    model.addAttribute("booklist",book);
-    return "home";
+		//書籍の{一覧情報を取得（タスク３）}
+		List<BookInfo> book = booksService.getBookList();
+		model.addAttribute("booklist", book);
+		return "home";
 	}
-	}
+}
