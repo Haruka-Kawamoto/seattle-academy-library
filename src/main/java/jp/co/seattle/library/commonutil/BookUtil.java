@@ -43,7 +43,7 @@ public class BookUtil {
 		if (!(checkDate(bookInfo.getPublishDate()))) {
 			errorList.add(PUBLISHDATE_ERROR);
 		}
-		
+
 		return errorList;
 	}
 
@@ -58,8 +58,15 @@ public class BookUtil {
 			DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 			formatter.setLenient(false); // ←これで厳密にチェックしてくれるようになる
 			//TODO　取得した日付の形式が正しければtrue（タスク４）
-			formatter.parse(publishDate);
-			return true;
+			if (publishDate.length() > 0) {
+				if (publishDate.length() == 8) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return true;
+			}
 		} catch (Exception p) {
 			p.printStackTrace();
 			return false;

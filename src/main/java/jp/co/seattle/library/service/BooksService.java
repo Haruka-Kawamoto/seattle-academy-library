@@ -23,7 +23,7 @@ public class BooksService {
 	final static Logger logger = LoggerFactory.getLogger(BooksService.class);
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-
+	
 	/**
 	 * 書籍リストを取得する
 	 *
