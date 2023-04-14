@@ -43,7 +43,7 @@ public class BookUtil {
 		if (!(checkDate(bookInfo.getPublishDate()))) {
 			errorList.add(PUBLISHDATE_ERROR);
 		}
-
+		
 		return errorList;
 	}
 
