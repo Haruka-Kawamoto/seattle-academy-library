@@ -18,7 +18,7 @@ public class BookUtil {
 	private static final String REQUIRED_ERROR = "未入力の必須項目があります";
 	private static final String ISBN_ERROR = "ISBNの桁数または半角数字が正しくありません";
 	private static final String PUBLISHDATE_ERROR = "出版日は半角数字のYYYYMMDD形式で入力してください";
-
+	
 	/**
 	 * 登録前のバリデーションチェック
 	 *
