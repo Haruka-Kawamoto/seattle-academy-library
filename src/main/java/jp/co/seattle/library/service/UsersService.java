@@ -34,6 +34,25 @@ public class UsersService {
 		jdbcTemplate.update(sql);
 	}
 
+	public class UsersServices {
+		final static Logger logger = LoggerFactory.getLogger(UsersService.class);
+		@Autowired
+		private JdbcTemplate jdbcTemplate;
+
+		/**
+		 * ユーザー情報を登録する
+		 * 
+		 * @param userInfo ユーザー情報
+		 */
+		public void registUser(UserInfo userInfo) {
+
+			// SQL生成
+			String sql = "INSERT INTO users (email, password,reg_date,upd_date) VALUES ('" + userInfo.getEmail() + "','"
+					+ userInfo.getPassword() + "',now(),now()" + ")";
+
+			jdbcTemplate.update(sql);
+		}
+
 	/**
 	 * ユーザー情報取得
 	 * 
